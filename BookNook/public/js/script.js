@@ -167,3 +167,69 @@ addToCart({
 console.log(JSON.parse(localStorage.getItem('cart')))
 
 
+function addToFavorites(book) {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    // Check if already added
+    const alreadyExists = favorites.some(fav => fav.id === book.id);
+    if (!alreadyExists) {
+        favorites.push(book);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
+        alert(`${book.title} added to favorites!`);
+    } else {
+        alert(`${book.title} is already in favorites.`);
+    }
+}
+
+// Show favorites when navbar heart icon is clicked
+document.addEventListener('DOMContentLoaded', () => {
+    const navbarHeart = document.querySelector('.header-1 .fa-heart');
+    if (navbarHeart) {
+        navbarHeart.addEventListener('click', function(e) {
+            e.preventDefault();
+            showFavorites();
+        });
+    }
+});
+
+function showFavorites() {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    let modalHTML = `
+        <div id="favoritesModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Your Favorite Books</h2>
+                ${favorites.length === 0 ? "<p>No favorites yet.</p>" : ""}
+                <ul class="favorites-list">
+                    ${favorites.map(book => `
+                        <li>
+                            <img src="${book.image}" width="50">
+                            <span>${book.title}</span> - $${book.price.toFixed(2)}
+                        </li>
+                    `).join('')}
+                </ul>
+            </div>
+        </div>
+    `;
+
+    // Remove old modal if exists
+    const oldModal = document.getElementById('favoritesModal');
+    if (oldModal) oldModal.remove();
+
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+    // Open modal
+    const modal = document.getElementById('favoritesModal');
+    modal.style.display = 'block';
+
+    document.querySelector('.close-btn').onclick = () => {
+        modal.style.display = 'none';
+    };
+
+    window.onclick = e => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+}

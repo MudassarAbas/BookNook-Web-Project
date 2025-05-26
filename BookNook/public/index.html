@@ -32,7 +32,7 @@
 
         <div class="icons">
     <div id="search-btn" class="fas fa-search"></div>
-    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-heart" onclick="showFavorites()"></a>
     <a href="#" class="fas fa-shopping-cart" id="cart-icon"></a>
     <a href="./login.html">
     <div id="login-btn" class="fas fa-user"></div></a>
@@ -166,175 +166,195 @@
 
         <div class="swiper-wrapper">
 
-            <!-- Book 1 -->
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-1.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Featured Book 1</h3>
-                    <div class="price">$10.99 <span>$14.99</span></div>
-                    <a href="#" class="btn" onclick="addToCart({ id: 1, title: 'Featured Book 1', price: 15.99, image: 'image/book-1.png' })">add to cart</a>
-                </div>
-            </div>
+           <!-- Book 1 -->
+<div class="swiper-slide box">
+    <div class="icons">
+        <a href="#" class="fas fa-search"></a>
+        <a href="#" class="fas fa-heart"
+           onclick="addToFavorites({ id: 1, title: 'Featured Book 1', price: 10.99, image: 'image/book-1.png' })"></a>
+        <a href="#" class="fas fa-eye"></a>
+    </div>
+    <div class="image">
+        <img src="image/book-1.png" alt="Featured Book 1 cover">
+    </div>
+    <div class="content">
+        <h3>Featured Book 1</h3>
+        <div class="price">$10.99 <span>$14.99</span></div>
+        <a href="#" class="btn"
+           onclick="addToCart({ id: 1, title: 'Featured Book 1', price: 10.99, image: 'image/book-1.png' })">add to cart</a>
+    </div>
+</div>
 
-            <!-- Book 2 -->
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-2.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Featured Book 2</h3>
-                    <div class="price">$11.99 <span>$15.99</span></div>
-                    <a href="#" class="btn" onclick="addToCart({ id: 2, title: 'Featured Book 2', price: 15.99, image: 'image/book-2.png' })">add to cart</a>
-                </div>
-            </div>
+<!-- Book 2 -->
+<div class="swiper-slide box">
+    <div class="icons">
+        <a href="#" class="fas fa-search"></a>
+        <a href="#" class="fas fa-heart"
+           onclick="addToFavorites({ id: 2, title: 'Featured Book 2', price: 11.99, image: 'image/book-2.png' })"></a>
+        <a href="#" class="fas fa-eye"></a>
+    </div>
+    <div class="image">
+        <img src="image/book-2.png" alt="Featured Book 2 cover">
+    </div>
+    <div class="content">
+        <h3>Featured Book 2</h3>
+        <div class="price">$11.99 <span>$15.99</span></div>
+        <a href="#" class="btn"
+           onclick="addToCart({ id: 2, title: 'Featured Book 2', price: 11.99, image: 'image/book-2.png' })">add to cart</a>
+    </div>
+</div>
 
-            <!-- Book 3 -->
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-3.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Featured Book 3</h3>
-                    <div class="price">$12.99 <span>$17.99</span></div>
-                    <a href="#" class="btn" onclick="addToCart({ id: 3, title: 'Featured Book 3', price: 15.99, image: 'image/book-3.png' })">add to cart</a>
-                </div>
-            </div>
+<!-- Book 3 -->
+<div class="swiper-slide box">
+    <div class="icons">
+        <a href="#" class="fas fa-search"></a>
+        <a href="#" class="fas fa-heart"
+           onclick="addToFavorites({ id: 3, title: 'Featured Book 3', price: 12.99, image: 'image/book-3.png' })"></a>
+        <a href="#" class="fas fa-eye"></a>
+    </div>
+    <div class="image">
+        <img src="image/book-3.png" alt="Featured Book 3 cover">
+    </div>
+    <div class="content">
+        <h3>Featured Book 3</h3>
+        <div class="price">$12.99 <span>$17.99</span></div>
+        <a href="#" class="btn"
+           onclick="addToCart({ id: 3, title: 'Featured Book 3', price: 12.99, image: 'image/book-3.png' })">add to cart</a>
+    </div>
+</div>
 
-            <!-- Book 4 -->
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-4.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Featured Book 4</h3>
-                    <div class="price">$13.99 <span>$18.99</span></div>
-                    <a href="#" class="btn" onclick="addToCart({ id: 4, title: 'Featured Book 4', price: 15.99, image: 'image/book-4.png' })">add to cart</a>
-                </div>
-            </div>
+<!-- Book 4 -->
+<div class="swiper-slide box">
+    <div class="icons">
+        <a href="#" class="fas fa-search"></a>
+        <a href="#" class="fas fa-heart"
+           onclick="addToFavorites({ id: 4, title: 'Featured Book 4', price: 13.99, image: 'image/book-4.png' })"></a>
+        <a href="#" class="fas fa-eye"></a>
+    </div>
+    <div class="image">
+        <img src="image/book-4.png" alt="Featured Book 4 cover">
+    </div>
+    <div class="content">
+        <h3>Featured Book 4</h3>
+        <div class="price">$13.99 <span>$18.99</span></div>
+        <a href="#" class="btn"
+           onclick="addToCart({ id: 4, title: 'Featured Book 4', price: 13.99, image: 'image/book-4.png' })">add to cart</a>
+    </div>
+</div>
 
-            <!-- Book 5 -->
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-5.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Featured Book 5</h3>
-                    <div class="price">$14.99 <span>$19.99</span></div>
-                    <a href="#" class="btn" onclick="addToCart({ id: 5, title: 'Featured Book 5', price: 15.99, image: 'image/book-5.png' })">add to cart</a>
-                </div>
-            </div>
+<!-- Book 5 -->
+<div class="swiper-slide box">
+    <div class="icons">
+        <a href="#" class="fas fa-search"></a>
+        <a href="#" class="fas fa-heart"
+           onclick="addToFavorites({ id: 5, title: 'Featured Book 5', price: 14.99, image: 'image/book-5.png' })"></a>
+        <a href="#" class="fas fa-eye"></a>
+    </div>
+    <div class="image">
+        <img src="image/book-5.png" alt="Featured Book 5 cover">
+    </div>
+    <div class="content">
+        <h3>Featured Book 5</h3>
+        <div class="price">$14.99 <span>$19.99</span></div>
+        <a href="#" class="btn"
+           onclick="addToCart({ id: 5, title: 'Featured Book 5', price: 14.99, image: 'image/book-5.png' })">add to cart</a>
+    </div>
+</div>
 
-            <!-- Book 6 -->
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-6.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Featured Book 6</h3>
-                    <div class="price">$15.99 <span>$20.99</span></div>
-                    <a href="#" class="btn" onclick="addToCart({ id: 6, title: 'Featured Book 6', price: 15.99, image: 'image/book-6.png' })">add to cart</a>
-                </div>
-            </div>
+<!-- Book 6 -->
+<div class="swiper-slide box">
+    <div class="icons">
+        <a href="#" class="fas fa-search"></a>
+        <a href="#" class="fas fa-heart"
+           onclick="addToFavorites({ id: 6, title: 'Featured Book 6', price: 15.99, image: 'image/book-6.png' })"></a>
+        <a href="#" class="fas fa-eye"></a>
+    </div>
+    <div class="image">
+        <img src="image/book-6.png" alt="Featured Book 6 cover">
+    </div>
+    <div class="content">
+        <h3>Featured Book 6</h3>
+        <div class="price">$15.99 <span>$20.99</span></div>
+        <a href="#" class="btn"
+           onclick="addToCart({ id: 6, title: 'Featured Book 6', price: 15.99, image: 'image/book-6.png' })">add to cart</a>
+    </div>
+</div>
 
-            <!-- Book 7 -->
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-7.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Featured Book 7</h3>
-                    <div class="price">$16.99 <span>$20.99</span></div>
-                    <a href="#" class="btn" onclick="addToCart({ id: 7, title: 'Featured Book 7', price: 15.99, image: 'image/book-7.png' })">add to cart</a>
-                </div>
-            </div>
+<!-- Book 7 -->
+<div class="swiper-slide box">
+    <div class="icons">
+        <a href="#" class="fas fa-search"></a>
+        <a href="#" class="fas fa-heart"
+           onclick="addToFavorites({ id: 7, title: 'Featured Book 7', price: 16.99, image: 'image/book-7.png' })"></a>
+        <a href="#" class="fas fa-eye"></a>
+    </div>
+    <div class="image">
+        <img src="image/book-7.png" alt="Featured Book 7 cover">
+    </div>
+    <div class="content">
+        <h3>Featured Book 7</h3>
+        <div class="price">$16.99 <span>$20.99</span></div>
+        <a href="#" class="btn"
+           onclick="addToCart({ id: 7, title: 'Featured Book 7', price: 16.99, image: 'image/book-7.png' })">add to cart</a>
+    </div>
+</div>
 
-            <!-- Book 8 -->
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-8.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Featured Book 8</h3>
-                    <div class="price">$17.99 <span>$20.99</span></div>
-                    <a href="#" class="btn" onclick="addToCart({ id: 8, title: 'Featured Book 8', price: 15.99, image: 'image/book-8.png' })">add to cart</a>
-                </div>
-            </div>
+<!-- Book 8 -->
+<div class="swiper-slide box">
+    <div class="icons">
+        <a href="#" class="fas fa-search"></a>
+        <a href="#" class="fas fa-heart"
+           onclick="addToFavorites({ id: 8, title: 'Featured Book 8', price: 17.99, image: 'image/book-8.png' })"></a>
+        <a href="#" class="fas fa-eye"></a>
+    </div>
+    <div class="image">
+        <img src="image/book-8.png" alt="Featured Book 8 cover">
+    </div>
+    <div class="content">
+        <h3>Featured Book 8</h3>
+        <div class="price">$17.99 <span>$20.99</span></div>
+        <a href="#" class="btn"
+           onclick="addToCart({ id: 8, title: 'Featured Book 8', price: 17.99, image: 'image/book-8.png' })">add to cart</a>
+    </div>
+</div>
 
-            <!-- Book 9 -->
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-9.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Featured Book 9</h3>
-                    <div class="price">$18.99 <span>$20.99</span></div>
-                    <a href="#" class="btn" onclick="addToCart({ id: 9, title: 'Featured Book 9', price: 15.99, image: 'image/book-9.png' })">add to cart</a>
-                </div>
-            </div>
+<!-- Book 9 -->
+<div class="swiper-slide box">
+    <div class="icons">
+        <a href="#" class="fas fa-search"></a>
+        <a href="#" class="fas fa-heart"
+           onclick="addToFavorites({ id: 9, title: 'Featured Book 9', price: 18.99, image: 'image/book-9.png' })"></a>
+        <a href="#" class="fas fa-eye"></a>
+    </div>
+    <div class="image">
+        <img src="image/book-9.png" alt="Featured Book 9 cover">
+    </div>
+    <div class="content">
+        <h3>Featured Book 9</h3>
+        <div class="price">$18.99 <span>$20.99</span></div>
+        <a href="#" class="btn"
+           onclick="addToCart({ id: 9, title: 'Featured Book 9', price: 18.99, image: 'image/book-9.png' })">add to cart</a>
+    </div>
+</div>
 
-            <!-- Book 10 -->
-            <div class="swiper-slide box">
-                <div class="icons">
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/book-10.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>Featured Book 10</h3>
-                    <div class="price">$19.99 <span>$20.99</span></div>
-                    <a href="#" class="btn" onclick="addToCart({ id: 10, title: 'Featured Book 10', price: 15.99, image: 'image/book-10.png' })">add to cart</a>
-                </div>
-            </div>
+<!-- Book 10 -->
+<div class="swiper-slide box">
+    <div class="icons">
+        <a href="#" class="fas fa-search"></a>
+        <a href="#" class="fas fa-heart"
+           onclick="addToFavorites({ id: 10, title: 'Featured Book 10', price: 19.99, image: 'image/book-10.png' })"></a>
+        <a href="#" class="fas fa-eye"></a>
+    </div>
+    <div class="image">
+        <img src="image/book-10.png" alt="Featured Book 10 cover">
+    </div>
+    <div class="content">
+        <h3>Featured Book 10</h3>
+        <div class="price">$19.99 <span>$20.99</span></div>
+        <a href="#" class="btn"
+           onclick="addToCart({ id: 10, title: 'Featured Book 10', price: 19.99, image: 'image/book-10.png' })">add to cart</a>
+    </div>
+</div>
 
         </div>
 
